@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+  mysql:
+    container_name: mysql
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: indigitalldb
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  indigitall_server:
+    container_name: indigitall_server
+    restart: always
+    image: node:latest
+    command: sh -c "npm install && npm run dev"
+    working_dir: /usr/server
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: indigitalldb
+    volumes:
+      - .:/usr/server
+    ports:
+      - "3000:3000"
+    links:
+      - mysql

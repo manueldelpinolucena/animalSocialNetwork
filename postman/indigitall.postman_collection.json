@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "e1c78be3-5df2-4c64-b5fc-4d2f0d2d01b0",
+		"name": "indigitall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User North Hemisphere",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"manueldelpino\",\n\t\"email\": \"manueldelpinolucena@gmail.com\",\n\t\"password\": \"03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4\",\n\t\"latitude\": 40.5045248,\n\t\"longitude\": -3.6700160000000004,\n\t\"language\": \"EN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}{{port}}/api/user",
+					"host": [
+						"{{protocol}}{{host}}{{port}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User South Hemisphere",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"manueldelpino\",\n\t\"email\": \"manueldelpinolucena@gmail.com\",\n\t\"password\": \"03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4\",\n\t\"latitude\": -33.865143, \n\t\"longitude\": 151.209900,\n\t\"language\": \"EN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}{{port}}/api/user",
+					"host": [
+						"{{protocol}}{{host}}{{port}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}{{port}}/api/user/1",
+					"host": [
+						"{{protocol}}{{host}}{{port}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"manuel@gmail.com\",\n\t\"latitude\": 40.5045248,\n\t\"longitude\": -3.6700160000000004,\n\t\"language\": \"EN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}{{port}}/api/user/1",
+					"host": [
+						"{{protocol}}{{host}}{{port}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"manuel@gmail.com\",\n\t\"latitude\": 40.5045248,\n\t\"longitude\": -3.6700160000000004,\n\t\"language\": \"EN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}{{port}}/api/user/2",
+					"host": [
+						"{{protocol}}{{host}}{{port}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Friends List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}{{host}}{{port}}/api/user/4/friends/list",
+					"host": [
+						"{{protocol}}{{host}}{{port}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"4",
+						"friends",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Total Friends",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}{{host}}{{port}}/api/user/3/friends/count",
+					"host": [
+						"{{protocol}}{{host}}{{port}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"3",
+						"friends",
+						"count"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
