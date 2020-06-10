@@ -25,11 +25,14 @@ Por último una capa de servicio, donde este gestiona las peticiones a la base d
 Todas las queries se pueden probar importando los archivos de la carpeta postman.
 Base url http://localhost:3000/api
 
-1. Create user [POST]
+1. Crear un usuario.
+
    ```
-   http://localhost:3000/api/user
+   [POST] http://localhost:3000/api/user
    ```
+
    Ejemplo de usuario:
+
    ```json
    {
      "username": "manueldelpino",
@@ -40,17 +43,16 @@ Base url http://localhost:3000/api
      "language": "EN"
    }
    ```
-2. Get User [GET]
-   Se obtiene un usuario a partir de su id.
+
+2. Obtener un usuario a partir de su id.
 
    ```
-   http://localhost:3000/api/user/:id
+   [GET] http://localhost:3000/api/user/:id
    ```
 
-3. Update User [PATCH]
-   Se actualiza un usuario a partir de su id.
+3. Actualizar un usuario a partir de su id.
    ```
-   http://localhost:3000/api/user
+   [PATCH] http://localhost:3000/api/user/:id
    ```
    Se puede modificar el email, latitud, longitud y lenguage del usuario. Ej:
    ```json
@@ -61,18 +63,17 @@ Base url http://localhost:3000/api
      "language": "EN"
    }
    ```
-4. Delete User [DELETE]
-   Se borra un usuario a partir de su id.
+4. Borrar un usuario a partir de su id.
 
    ```
-   http://localhost:3000/api/user/:id
+   [DELETE] http://localhost:3000/api/user/:id
    ```
 
-5. Obtener listado de amigos de un usuario a partir de su id [GET]
+5. Obtener listado de amigos de un usuario a partir de su id.
    ```
-   http://localhost:3000/api/user/:id/friends/list
+   [GET] http://localhost:3000/api/user/:id/friends/list
    ```
-6. Obtener numero total de amigos de un usuario a partir de su id [GET]
+6. Obtener numero total de amigos de un usuario a partir de su id.
    ```
-   http://localhost:3000/api/user/:id/friends/count
+   [GET] http://localhost:3000/api/user/:id/friends/count
    ```
