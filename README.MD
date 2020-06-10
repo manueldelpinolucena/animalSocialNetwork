@@ -16,10 +16,12 @@ Por último una capa de servicio, donde este gestiona las peticiones a la base d
    docker-compose up -d
    ```
 2. Ejecutar las semillas que están en el directorio:
+
    - dbrootuser: root
    - dbrootpassword: example
    - host: 127.0.0.1
    - dbport: 3306
+
    ```
    /mysql/seeds.sql
    ```
